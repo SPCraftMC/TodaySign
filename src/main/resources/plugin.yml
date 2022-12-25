@@ -3,3 +3,10 @@ version: 1.0-SNAPSHOT
 api-version: 1.18
 main: moe.xmcn.spcraft.todaysign.TodaySign
 author: XiaMoHuaHuo_CN
+depend:
+  - MiraiMC
+  - XConomy
+  - Link2QQ
+commands:
+  todaysign:
+    description: "TodaySign"

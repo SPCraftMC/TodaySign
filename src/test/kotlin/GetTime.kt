@@ -1,7 +1,7 @@
 import java.text.SimpleDateFormat
 import java.util.*
 
-fun main() {
+fun xmain() {
     val sdf = SimpleDateFormat("HH")
     val currentDate = sdf.format(Date())
     println(currentDate)
