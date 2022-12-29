@@ -29,7 +29,7 @@ class OnGroupMessageEvent : Listener {
         ) {
             val playerId = e.senderID
             val playerUuid = MiraiMC.getBind(playerId)
-            if (e.message == "!spm 签到") {
+            if (e.message == plugin.config.getString("sign.prefix")) {
                 if (!plugin.config.getStringList("signed").contains(playerUuid?.let { Bukkit.getOfflinePlayer(it).name })) {
                     if (playerUuid != null) {
 
@@ -48,7 +48,10 @@ class OnGroupMessageEvent : Listener {
                             .sendMessageMirai(
                                 "签到成功，奖励 " +
                                         plugin.config.getLong("sign.money") +
-                                        " 硬币。"
+                                        " 硬币。\n\n" +
+                                        "当前账户余额：" +
+                                        xcapi.getPlayerData(playerUuid).balance +
+                                        "硬币。"
                             )
 
                     } else {

@@ -3,5 +3,6 @@ group: 123456
 
 sign:
   money: 200
+  prefix: "签到"
 
 signed:
